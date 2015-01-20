@@ -1,0 +1,12 @@
+<%= form_for @recipe do |f| %>
+  <% @recipe.errors.full_messages.each do |msg| %>
+    <p><%= msg %></p>
+  <% end %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :instructions %>
+  <%= f.text_field :instructions %>
+  <br>
+  <%= f.submit 'Save' %>
+<% end %>
