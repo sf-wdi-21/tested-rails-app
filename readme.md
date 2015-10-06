@@ -52,10 +52,20 @@ rspec spec/models
 rspec spec/controllers/accounts_controller_spec.rb
 ```
 
-### Generators
+###Generators
 
 Once installed, RSpec will generate spec files instead of Test::Unit test files when commands like `rails generate model` and `rails generate controller` are used. If the model you want to test already exists, you can invoke RSpec generators independently by running `rails generate rspec:model <name_of_model>` will generate a model spec. For more information, see [list of all generators](https://www.relishapp.com/rspec/rspec-rails/docs/generators).
 
+###Dependencies
+
+In this example `shoulda` matchers are used to help make the tests more readable and so is `factory-girl`, which helps create valid model instances to test in order to maintain flexible and DRY tests. Keep in mind that neither of these gems are necessary, just a convenience in making the tests more readable. If you want to do the same, you'll need both of them.
+
+```
+group :development, :test do
+  gem 'shoulda-matchers', require: false
+  gem 'factory_girl_rails'
+end
+```
 
 ###Examples
 
