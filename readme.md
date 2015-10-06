@@ -67,6 +67,8 @@ group :development, :test do
 end
 ```
 
+Finally add `require 'shoulda/matchers'` to `rails-helper.rb` to require shoulda matchers.
+
 ###Examples
 
 * Look inside this project's `/spec` directory to see some example tests. Pay particular attention to the `/spec/models` directory as model tests, aka unit tests, is the first step in a testing an application.
