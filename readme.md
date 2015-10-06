@@ -60,7 +60,7 @@ Once installed, RSpec will generate spec files instead of Test::Unit test files 
 
 In this example `shoulda` matchers are used to help make the tests more readable and so is `factory-girl`, which helps create valid model instances to test in order to maintain flexible and DRY tests. Keep in mind that neither of these gems are necessary, just a convenience in making the tests more readable. If you want to do the same, you'll need both of them.
 
-```
+```ruby
 group :development, :test do
   gem 'shoulda-matchers', require: false
   gem 'factory_girl_rails'
